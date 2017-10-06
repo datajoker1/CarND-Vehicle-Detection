@@ -2,6 +2,7 @@
 .idea
 .DS_Store
 *.p
+*.pyc
 vehicles
 vehicles_smallset
 non-vehicles

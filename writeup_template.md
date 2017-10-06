@@ -14,7 +14,7 @@ In total there are 8792 images of vehicles and 8968 images of non vehicles.
 Thus the data is slightly unbalanced with about 10% more non vehicle images than vehicle images.
 Shown below is an example of each class (vehicle, non-vehicle) of the data set. The data set is explored in the notebook `P5.ipynb` 
 
-!(./output_images/load_data.png)
+![1](./output_images/load_data.png)
 
 
 # Histogram of Oriented Gradients (HOG)
@@ -22,7 +22,7 @@ Shown below is an example of each class (vehicle, non-vehicle) of the data set. 
 ## Extraction of HOG, color and spatial features
 Each set was shuffled individually. The code for this step is contained in the first six cells of the IPython notebook `HOG_Classify.ipynb`. I explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  
 
-![output_images][explore.png]
+![2](./output_images/explore.png)
 
 ##  Choice of parameters and channels for HOG
 I experimented with a number of different combinations of color spaces and HOG parameters and trained  a linear SVM using different combinations of HOG features extracted from the color channels. For HLS color space the L-channel appears to be most important, followed by the S channel. I discarded RGB color space, for its undesirable properties under changing light conditions. 
@@ -49,9 +49,8 @@ were filtered out by using a heatmap approach
 
 In the file `P5_search.py` the class `BoundingBoxes` implements a FIFO queue that stores the bounding boxes of the last `n` frames. 
 For every frame the (possbly empty) list of detected bounding boxes gets added to the beginning of the queue, while the oldest list of bounding boxes falls out. 
-This queue is then used in the processing of the video and always contains the bounding boxes of the last `n=20` frames. 
-![output_images][result]
 
+![3](./output_images/result.png)
 ---
 # Discussion
 
