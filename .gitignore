@@ -1,0 +1,9 @@
+.ipynb_checkpoints
+.idea
+.DS_Store
+*.p
+vehicles
+vehicles_smallset
+non-vehicels
+non-vehicels_smallset
+
