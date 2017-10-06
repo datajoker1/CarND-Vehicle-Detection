@@ -14,7 +14,7 @@ In total there are 8792 images of vehicles and 8968 images of non vehicles.
 Thus the data is slightly unbalanced with about 10% more non vehicle images than vehicle images.
 Shown below is an example of each class (vehicle, non-vehicle) of the data set. The data set is explored in the notebook `P5.ipynb` 
 
-![output_images][load_data]
+!(./output_images/load_data.png)
 
 
 # Histogram of Oriented Gradients (HOG)
@@ -22,7 +22,7 @@ Shown below is an example of each class (vehicle, non-vehicle) of the data set. 
 ## Extraction of HOG, color and spatial features
 Each set was shuffled individually. The code for this step is contained in the first six cells of the IPython notebook `HOG_Classify.ipynb`. I explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  
 
-![output_images][explore]
+![output_images][explore.png]
 
 ##  Choice of parameters and channels for HOG
 I experimented with a number of different combinations of color spaces and HOG parameters and trained  a linear SVM using different combinations of HOG features extracted from the color channels. For HLS color space the L-channel appears to be most important, followed by the S channel. I discarded RGB color space, for its undesirable properties under changing light conditions. 
